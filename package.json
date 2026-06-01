@@ -1,0 +1,79 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "switch-window",
+  "title": "Switch Window",
+  "description": "Switch window of same app based on currently focused window and/or desktop",
+  "icon": "extension-icon.png",
+  "author": "abdur_rehman_khalil",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "switch-window-last-focused",
+      "title": "Switch Window Last Focused",
+      "subtitle": "Window Management",
+      "description": "Switch to the last window of current app on currently focused desktop",
+      "mode": "no-view"
+    },
+    {
+      "name": "switch-window-last-visible",
+      "title": "Switch Window Last Visible",
+      "subtitle": "Window Management",
+      "description": "Switch to the last window of current app across all visible desktop (on multiple screens)",
+      "mode": "no-view"
+    },
+    {
+      "name": "switch-window-next-focused",
+      "title": "Switch Window Next Focused",
+      "subtitle": "Window Management",
+      "description": "Switch to the next window of current app on currently focused desktop",
+      "mode": "no-view"
+    },
+    {
+      "name": "switch-window-next-visible",
+      "title": "Switch Window Next Visible",
+      "subtitle": "Window Management",
+      "description": "Switch to the next window of current app across all visible desktop (on multiple screens)",
+      "mode": "no-view"
+    },
+    {
+      "name": "switch-window-prev-focused",
+      "title": "Switch Window Prev Focused",
+      "subtitle": "Window Management",
+      "description": "Switch to the previous window of current app on currently focused desktop",
+      "mode": "no-view"
+    },
+    {
+      "name": "switch-window-prev-visible",
+      "title": "Switch Window Prev Visible",
+      "subtitle": "Window Management",
+      "description": "Switch to the previous window of current app across all visible desktop (on multiple screens)",
+      "mode": "no-view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.19",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "^22.19.17",
+    "@types/react": "19.0.10",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
